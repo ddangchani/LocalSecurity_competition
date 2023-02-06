@@ -133,3 +133,5 @@ data/
 densitySpaceTime/
 STKDE/result/
 STKDE/data.csv
+df_for_regression.csv
+df_full.gpkg
