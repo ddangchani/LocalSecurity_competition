@@ -1,6 +1,6 @@
-def densityF(x, y, t, xi, yi, ti):
+from STKDE import sett
 
-    import sett
+def densityF(x, y, t, xi, yi, ti):
     
     u = (x-xi) / sett.p1 
     v = (y-yi) / sett.p1 
