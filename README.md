@@ -12,8 +12,21 @@
 > - 지역 내 ATM, CD 등 현금출금가능 시설 위치정보(크롤러 이용)
 >   - `Crawler_atm.ipynb` : `Selenium` 이용
 > - 국토교통부_전국 버스정류장 위치정보
+> - 상권정보(소상공인시장진흥공단)
 
 ## 분석 방법
-- SpatioTemporal Kernel Density Estimation(STKDE)
-  - code modified [from Here](https://github.com/alexandster/densitySpaceTime)
-  > 시공간 커널밀도분석으로 분석 대상 지역 내 보이스피싱 범죄 핫스팟(Hotspot) 추출
+- SpatioTemporal/Spatial Kernel Density Estimation(STKDE/SKDE) : 
+  > - 시공간(3D) or 공간(2D) 커널밀도분석으로 분석 대상 지역 내 보이스피싱 범죄 핫스팟(Hotspot) 추출
+  > - 사용 커널 : Epanechnikov kernel
+  > - code modified [from Here](https://github.com/alexandster/densitySpaceTime)
+
+- Spatial Regression : `pysal` 이용
+- Machine Learning(GBM) : with `pycaret`
+  > Hyperparameter tuning : Bayesian Optimization
+
+## 분석 결과
+제공 데이터셋과 외부데이터를 활용하여 대전 및 세종 지역의 보이스피싱 범죄위험지역을 100m 격자 단위로 분석한 결과</br>
+
+한 지역 내에서 보이스피싱 범죄가 발생하는 것을 **랜덤한 확률변수로** 가정하면
+- 공간커널밀도분석으로 oversmoothing bandwidth를 이용하여 지역 내 확률밀도함수를 추정할 수 있고
+- 외생변수공간시차모형(혹은 GBM 모델)을 활용하여 8%(12%)의 Hotspot으로 92%의 범죄 발생지점을 예측하는 모델을 생성할 수 있음
