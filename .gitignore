@@ -134,5 +134,6 @@ densitySpaceTime/
 STKDE/result/
 *.csv
 *.gpkg
+.DS_Store
 
 catboost_info/*
