@@ -1,6 +1,8 @@
 # LocalSecurity_competition
 제1회 지역 치안 안전 데이터 분석 경진대회를 위한 repository 입니다
 
+## Topic : Development of a prediction model for risk areas for voice fraud(voice phishing) using kernel density analysis and spatial models
+
 ## 분석 데이터
 - 플랫폼 측에서 제공받은 112 사건신고 접수 데이터(접수일시, 사건코드, 사건좌표)
   - 2020-2022년 데이터
