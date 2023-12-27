@@ -3,6 +3,8 @@
 
 ## Topic : Development of a prediction model for risk areas for voice fraud(voice phishing) using kernel density analysis and spatial models
 
+## 최종 보고서 : [Link](https://github.com/ddangchani/LocalSecurity_competition/blob/main/%E1%84%87%E1%85%A9%E1%84%80%E1%85%A9%E1%84%89%E1%85%A5_github.pdf)
+
 ## 분석 데이터
 - 플랫폼 측에서 제공받은 112 사건신고 접수 데이터(접수일시, 사건코드, 사건좌표)
   - 2020-2022년 데이터
